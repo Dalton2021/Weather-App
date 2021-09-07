@@ -96,7 +96,7 @@ function App() {
 
     async function getCoordinates() {
         // Geocode location
-        const api_geo = `http://api.openweathermap.org/geo/1.0/direct?q=${location[0]},${location[1]},${location[2]}&appid=${api_key}`;
+        const api_geo = `https://api.openweathermap.org/geo/1.0/direct?q=${location[0]},${location[1]},${location[2]}&appid=${api_key}`;
         const response_geo = await fetch(api_geo);
         const data_geo = await response_geo.json();
         let longitude = data_geo[0].lon;
